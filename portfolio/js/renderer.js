@@ -65,17 +65,95 @@ export function initSections(sections) {
  */
 export function renderNavigation(siteConfig) {
   const navLinks = siteConfig.nav.map(link => 
-    `<a href="${link.href}" class="nav-link">${link.label}</a>`
+    `<li><a href="${link.href}" class="nav-link" data-section="${link.href.substring(1)}">${link.label}</a></li>`
   ).join('');
   
   return `
     <nav class="nav">
       <div class="nav-container">
-        <a href="#" class="nav-logo">${siteConfig.title}</a>
-        <div class="nav-links">
+        <a href="#" class="nav-logo" aria-label="Home">${siteConfig.title}</a>
+        <ul class="nav-links">
           ${navLinks}
-        </div>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
       </div>
     </nav>
   `;
+}
+
+/**
+ * Initialize navigation functionality (mobile toggle, active states, smooth scroll)
+ */
+export function initNavigation() {
+  // Mobile menu toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking a link
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+  
+  // Active section highlighting on scroll
+  const sections = document.querySelectorAll('.section, .hero');
+  const navLinkElements = document.querySelectorAll('.nav-link');
+  
+  function updateActiveSection() {
+    let currentSection = '';
+    
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+      
+      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        const sectionId = section.getAttribute('id') || 'home';
+        currentSection = sectionId;
+      }
+    });
+    
+    navLinkElements.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('data-section') === currentSection) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Smooth scroll for navigation links
+  document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+      
+      if (targetSection) {
+        const navHeight = document.querySelector('.nav').offsetHeight;
+        const targetPosition = targetSection.offsetTop - navHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  // Listen to scroll events for active section highlighting
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  updateActiveSection(); // Initial call
 }

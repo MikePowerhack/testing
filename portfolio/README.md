@@ -149,12 +149,24 @@ Each project section has items in a grid:
 
 3. **Update the JSON** to reference your new image filenames
 
+## 📱 Responsive Design
+
+This portfolio is fully responsive and adapts to all screen sizes:
+
+- **Desktop** (1400px+): Large layout with multi-column grids
+- **Tablet** (769px - 1024px): Optimized two-column layouts
+- **Mobile** (≤768px): Single column with collapsible navigation menu
+- **Small Mobile** (≤480px): Compact layout with adjusted font sizes
+
+The navigation automatically converts to a hamburger menu on mobile devices.
+
 ## 🎯 Quick Tips
 
 - **Colors**: Use a color picker tool to get hex codes (#RRGGBB)
 - **Images**: Keep file sizes optimized for web (under 500KB per image ideal)
 - **Text**: Keep descriptions concise and friendly
 - **Testing**: Open `index.html` in a browser to preview changes
+- **Navigation**: Click any nav link to smoothly scroll to that section
 
 ## 🚀 Viewing Your Site
 
