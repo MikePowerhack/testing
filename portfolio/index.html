@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Artist portfolio featuring illustrations, animations, and character designs">
+  <meta name="keywords" content="portfolio, artist, illustrator, character design, animation, art">
+  <meta name="author" content="Your Name">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="My Portfolio">
+  <meta property="og:description" content="A cozy corner of art and creativity">
+  
+  <!-- Favicon (placeholder) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <!-- No-JS Fallback Styles -->
+  <noscript>
+    <style>
+      .parallax-layer {
+        animation: none !important;
+        background-position: center !important;
+      }
+      .character-walking {
+        animation: walkInPlace 0.5s steps(4) infinite;
+      }
+    </style>
+  </noscript>
+</head>
+<body>
+  <!-- Main App Container - Content will be injected by JavaScript -->
+  <main id="app">
+    <!-- Fallback content for no-JS or loading state -->
+    <section class="hero">
+      <div class="parallax-container">
+        <div class="parallax-layer parallax-layer--back" style="background-color: var(--color-accent);"></div>
+        <div class="parallax-layer parallax-layer--mid" style="background-color: var(--color-secondary);"></div>
+        <div class="parallax-layer parallax-layer--front" style="background-color: var(--color-primary);"></div>
+      </div>
+      
+      <div class="character-container">
+        <!-- Placeholder for walking character GIF -->
+        <img 
+          src="assets/images/walking-character.gif" 
+          alt="Walking character" 
+          class="character-walking"
+          onerror="this.style.display='none'"
+        />
+        
+        <div class="hero-content">
+          <h1 class="hero-title">Welcome to My World</h1>
+          <p class="hero-subtitle">A cozy corner of art and creativity</p>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </section>
+    
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate artist who loves creating whimsical characters, charming illustrations, and heartwarming animations. Welcome to my cozy creative space!</p>
+          </div>
+          <div class="about-image">
+            <img src="assets/images/about-photo.png" alt="About Me" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="illustrations" class="section projects section--pink">
+      <div class="container">
+        <h2 class="section-title">Illustrations</h2>
+        <p style="text-align: center; margin-bottom: var(--space-8); color: var(--color-text-light);">A collection of my digital and traditional illustrations</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Illustration 1</div>
+            <div class="project-info">
+              <h3 class="project-title">Forest Friends</h3>
+              <p class="project-description">Cute woodland creatures having a tea party</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Illustration 2</div>
+            <div class="project-info">
+              <h3 class="project-title">Seasonal Magic</h3>
+              <p class="project-description">Four seasons represented by magical characters</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Illustration 3</div>
+            <div class="project-info">
+              <h3 class="project-title">Dreamy Landscapes</h3>
+              <p class="project-description">Soft, pastel worlds from my imagination</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="animations" class="section projects section--green">
+      <div class="container">
+        <h2 class="section-title">Animations</h2>
+        <p style="text-align: center; margin-bottom: var(--space-8); color: var(--color-text-light);">Short animations and motion studies</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Animation 1</div>
+            <div class="project-info">
+              <h3 class="project-title">Character Walk Cycles</h3>
+              <p class="project-description">Various characters coming to life through movement</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Animation 2</div>
+            <div class="project-info">
+              <h3 class="project-title">Magical Effects</h3>
+              <p class="project-description">Sparkles, glows, and enchanting particle effects</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="characters" class="section projects section--blue">
+      <div class="container">
+        <h2 class="section-title">Character Designs</h2>
+        <p style="text-align: center; margin-bottom: var(--space-8); color: var(--color-text-light);">Original characters and design sheets</p>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Character 1</div>
+            <div class="project-info">
+              <h3 class="project-title">The Adventure Squad</h3>
+              <p class="project-description">A group of brave explorers ready for anything</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Character 2</div>
+            <div class="project-info">
+              <h3 class="project-title">Cozy Cafe Crew</h3>
+              <p class="project-description">Adorable baristas and their daily adventures</p>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image" style="display: flex; align-items: center; justify-content: center; color: var(--color-white);">Character 3</div>
+            <div class="project-info">
+              <h3 class="project-title">Mythical Beings</h3>
+              <p class="project-description">Fantasy creatures with unique personalities</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section id="resume" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Resume & Contact</h2>
+        <div class="contact-info">
+          <p>I'm currently available for freelance projects and collaborations. Feel free to reach out!</p>
+          <a href="mailto:hello@myportfolio.com" class="contact-email">hello@myportfolio.com</a>
+          
+          <div class="social-links">
+            <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://instagram.com/" class="social-link" aria-label="Instagram">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://artstation.com/" class="social-link" aria-label="ArtStation">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 21.75c-5.373 0-9.75-4.377-9.75-9.75S6.627 2.25 12 2.25 21.75 6.627 21.75 12 17.373 21.75 12 21.75zm4.844-10.594c-.281-.281-.656-.437-1.063-.437H8.219c-.406 0-.781.156-1.063.437-.281.281-.437.657-.437 1.063v1.562c0 .406.156.781.437 1.063.281.281.657.437 1.063.437h7.562c.406 0 .781-.156 1.063-.437.281-.281.437-.657.437-1.063v-1.562c0-.406-.156-.781-.437-1.063zM12 6.75c-.406 0-.781.156-1.063.437-.281.281-.437.657-.437 1.063v7.5c0 .406.156.781.437 1.063.281.281.657.437 1.063.437s.781-.156 1.063-.437c.281-.281.437-.657.437-1.063v-7.5c0-.406-.156-.781-.437-1.063-.281-.281-.657-.437-1.063-.437z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <div style="margin-top: var(--space-16);">
+          <h3 style="text-align: center; margin-bottom: var(--space-8);">Skills</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Digital Illustration</span>
+            <span class="skill-tag">Character Design</span>
+            <span class="skill-tag">2D Animation</span>
+            <span class="skill-tag">Concept Art</span>
+            <span class="skill-tag">Storyboarding</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: var(--space-16);">
+          <h3 style="text-align: center; margin-bottom: var(--space-8);">Experience</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <h4 class="experience-role">Freelance Illustrator</h4>
+              <p class="experience-company">Self-Employed</p>
+              <p class="experience-period">2020 - Present</p>
+              <p class="experience-description">Creating illustrations for books, games, and marketing materials</p>
+            </div>
+            <div class="experience-item">
+              <h4 class="experience-role">Character Designer</h4>
+              <p class="experience-company">Indie Game Studio</p>
+              <p class="experience-period">2019 - 2020</p>
+              <p class="experience-description">Designed main characters and NPCs for mobile games</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- JavaScript Module -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

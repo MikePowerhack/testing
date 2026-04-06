@@ -1,0 +1,25 @@
+{
+  "site": {
+    "title": "My Portfolio",
+    "tagline": "Artist & Creator",
+    "theme": {
+      "primary": "#8B7355",
+      "secondary": "#D4A574",
+      "accent": "#E8C4A0",
+      "background": "#F5EBE0",
+      "text": "#4A3F35"
+    },
+    "nav": [
+      { "label": "About", "href": "#about" },
+      { "label": "Illustrations", "href": "#illustrations" },
+      { "label": "Animations", "href": "#animations" },
+      { "label": "Character Designs", "href": "#characters" },
+      { "label": "Resume", "href": "#resume" }
+    ],
+    "social": [
+      { "name": "twitter", "url": "https://twitter.com/" },
+      { "name": "instagram", "url": "https://instagram.com/" },
+      { "name": "artstation", "url": "https://artstation.com/" }
+    ]
+  }
+}
