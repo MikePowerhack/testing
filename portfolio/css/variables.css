@@ -1,0 +1,70 @@
+/* CSS Custom Properties for Portfolio Theme */
+
+:root {
+  /* Colors - Cozy, warm palette */
+  --color-primary: #8B7355;
+  --color-secondary: #D4A574;
+  --color-accent: #E8C4A0;
+  --color-background: #F5EBE0;
+  --color-background-alt: #FFF8F0;
+  --color-text: #4A3F35;
+  --color-text-light: #6B5D52;
+  --color-white: #FFFFFF;
+  --color-soft-pink: #F4D4D4;
+  --color-soft-green: #D4E8D4;
+  --color-soft-blue: #D4E0E8;
+  
+  /* Typography */
+  --font-heading: 'Quicksand', 'Nunito', sans-serif;
+  --font-body: 'Nunito', 'Quicksand', sans-serif;
+  
+  /* Font Sizes */
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3rem;
+  
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(74, 63, 53, 0.1);
+  --shadow-md: 0 4px 6px rgba(74, 63, 53, 0.1);
+  --shadow-lg: 0 10px 15px rgba(74, 63, 53, 0.1);
+  --shadow-xl: 0 20px 25px rgba(74, 63, 53, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  
+  /* Z-index layers */
+  --z-parallax-back: 0;
+  --z-parallax-mid: 1;
+  --z-parallax-front: 2;
+  --z-character: 10;
+  --z-nav: 100;
+  --z-modal: 1000;
+}

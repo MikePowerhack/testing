@@ -1,0 +1,295 @@
+/* Component Styles - Section-specific */
+
+/* About Section */
+.about {
+  background: var(--color-background-alt);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.about-text h2 {
+  margin-bottom: var(--space-6);
+}
+
+.about-text p {
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  line-height: 1.8;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image img {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  transition: transform var(--transition-slow);
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+}
+
+/* Projects/Portfolio Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--color-accent);
+}
+
+.project-info {
+  padding: var(--space-6);
+}
+
+.project-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+}
+
+.project-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+/* Skills Section (in Resume) */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.skill-tag {
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-soft-pink);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: background var(--transition-fast);
+}
+
+.skill-tag:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Experience Timeline */
+.experience-list {
+  position: relative;
+  padding-left: var(--space-12);
+  margin-bottom: var(--space-12);
+}
+
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.experience-item::before {
+  content: '✦';
+  position: absolute;
+  left: -48px;
+  top: 0;
+  font-size: var(--text-xl);
+  color: var(--color-secondary);
+  background: var(--color-background);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.experience-role {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.experience-company {
+  font-size: var(--text-base);
+  color: var(--color-secondary);
+  margin-bottom: var(--space-2);
+}
+
+.experience-period {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-3);
+}
+
+.experience-description {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+/* Contact Section */
+.contact-info {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-info p {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-8);
+}
+
+.contact-email {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-email:hover {
+  background: var(--color-primary);
+  transform: scale(1.05);
+  color: var(--color-white);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.social-link:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Decorative Elements */
+.decorative-dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: radial-gradient(var(--color-primary) 2px, transparent 2px);
+  background-size: 30px 30px;
+}
+
+/* Section Backgrounds */
+.section--alternate {
+  background: var(--color-background-alt);
+}
+
+.section--pink {
+  background: linear-gradient(135deg, var(--color-soft-pink) 0%, var(--color-background) 100%);
+}
+
+.section--green {
+  background: linear-gradient(135deg, var(--color-soft-green) 0%, var(--color-background) 100%);
+}
+
+.section--blue {
+  background: linear-gradient(135deg, var(--color-soft-blue) 0%, var(--color-background) 100%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  
+  .about-image::before {
+    display: none;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-list {
+    padding-left: var(--space-8);
+  }
+  
+  .experience-list::before {
+    left: 10px;
+  }
+  
+  .experience-item::before {
+    left: -38px;
+    font-size: var(--text-lg);
+    width: 30px;
+    height: 30px;
+  }
+}

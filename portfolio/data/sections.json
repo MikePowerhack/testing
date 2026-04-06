@@ -1,0 +1,113 @@
+{
+  "sections": [
+    {
+      "id": "hero",
+      "type": "hero",
+      "title": "Welcome to My World",
+      "subtitle": "A cozy corner of art and creativity",
+      "walkingCharacter": {
+        "gif": "assets/images/walking-character.gif",
+        "alt": "Walking character"
+      },
+      "parallaxBackgrounds": [
+        "assets/images/bg-layer-1.png",
+        "assets/images/bg-layer-2.png",
+        "assets/images/bg-layer-3.png"
+      ]
+    },
+    {
+      "id": "about",
+      "type": "about",
+      "title": "About Me",
+      "content": "Hello! I'm a passionate artist who loves creating whimsical characters, charming illustrations, and heartwarming animations. Welcome to my cozy creative space!",
+      "image": "assets/images/about-photo.png"
+    },
+    {
+      "id": "illustrations",
+      "type": "projects",
+      "title": "Illustrations",
+      "description": "A collection of my digital and traditional illustrations",
+      "items": [
+        {
+          "title": "Forest Friends",
+          "image": "assets/images/illustration-1.png",
+          "description": "Cute woodland creatures having a tea party"
+        },
+        {
+          "title": "Seasonal Magic",
+          "image": "assets/images/illustration-2.png",
+          "description": "Four seasons represented by magical characters"
+        },
+        {
+          "title": "Dreamy Landscapes",
+          "image": "assets/images/illustration-3.png",
+          "description": "Soft, pastel worlds from my imagination"
+        }
+      ]
+    },
+    {
+      "id": "animations",
+      "type": "projects",
+      "title": "Animations",
+      "description": "Short animations and motion studies",
+      "items": [
+        {
+          "title": "Character Walk Cycles",
+          "image": "assets/images/animation-1.png",
+          "description": "Various characters coming to life through movement"
+        },
+        {
+          "title": "Magical Effects",
+          "image": "assets/images/animation-2.png",
+          "description": "Sparkles, glows, and enchanting particle effects"
+        }
+      ]
+    },
+    {
+      "id": "characters",
+      "type": "projects",
+      "title": "Character Designs",
+      "description": "Original characters and design sheets",
+      "items": [
+        {
+          "title": "The Adventure Squad",
+          "image": "assets/images/character-1.png",
+          "description": "A group of brave explorers ready for anything"
+        },
+        {
+          "title": "Cozy Cafe Crew",
+          "image": "assets/images/character-2.png",
+          "description": "Adorable baristas and their daily adventures"
+        },
+        {
+          "title": "Mythical Beings",
+          "image": "assets/images/character-3.png",
+          "description": "Fantasy creatures with unique personalities"
+        }
+      ]
+    },
+    {
+      "id": "resume",
+      "type": "contact",
+      "title": "Resume & Contact",
+      "content": "I'm currently available for freelance projects and collaborations. Feel free to reach out!",
+      "skills": ["Digital Illustration", "Character Design", "2D Animation", "Concept Art", "Storyboarding"],
+      "experience": [
+        {
+          "role": "Freelance Illustrator",
+          "company": "Self-Employed",
+          "period": "2020 - Present",
+          "description": "Creating illustrations for books, games, and marketing materials"
+        },
+        {
+          "role": "Character Designer",
+          "company": "Indie Game Studio",
+          "period": "2019 - 2020",
+          "description": "Designed main characters and NPCs for mobile games"
+        }
+      ],
+      "email": "hello@myportfolio.com",
+      "socialLinks": true
+    }
+  ]
+}
