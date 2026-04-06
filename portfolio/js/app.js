@@ -3,7 +3,7 @@
  * Fetches data, renders components, and initializes the portfolio site
  */
 
-import { renderAllSections, initSections, renderNavigation } from './renderer.js';
+import { renderAllSections, initSections, renderNavigation, initNavigation } from './renderer.js';
 
 // State
 let siteConfig = null;
@@ -30,7 +30,7 @@ async function fetchJSON(path) {
 /**
  * Initialize navigation
  */
-function initNavigation() {
+function setupNavigation() {
   if (!siteConfig) return;
   
   const navHTML = renderNavigation(siteConfig);
@@ -46,6 +46,9 @@ function initNavigation() {
     metaDesc.content = siteConfig.site.description;
     document.head.appendChild(metaDesc);
   }
+  
+  // Initialize navigation functionality (mobile toggle, smooth scroll, active states)
+  initNavigation();
 }
 
 /**
@@ -90,7 +93,7 @@ async function init() {
     sectionsData = sections;
     
     // Render the application
-    initNavigation();
+    setupNavigation();
     renderContent();
     initialize();
     
